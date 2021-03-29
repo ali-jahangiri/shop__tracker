@@ -1,0 +1,49 @@
+.newProduct {
+    &__trigger {
+        background-color: transparent;
+        border-radius: 5px;
+        border: 1px solid $light__green;
+        padding: 0.2rem 1rem;
+        color: gray;
+    }
+
+    &__modal {
+        display: flex;
+        flex-direction: column;
+
+
+        input {
+            @include input();
+            margin: 0.5rem 0;
+        }
+
+        p {
+            text-align: right;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__input {
+        &--invalid {
+            @include inputErr()
+        }
+    }
+
+    &__controller {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: flex-start;
+
+        button {
+            background-color: transparent;
+            border: none;
+            padding: .5rem 1rem;
+
+            // submit btn
+            &:last-child {
+                border: 2px solid $light__green;
+                border-radius: 5px;
+            }
+        }
+    }
+}

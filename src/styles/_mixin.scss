@@ -1,0 +1,26 @@
+@mixin input {
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid $grey;
+    padding: .5rem;
+    text-align: right;
+    transition: 0.3s;
+
+    &:focus {
+        border-color: lighten($color: grey, $amount: 5%);
+    }
+}
+
+@mixin inputErr() {
+    animation: borderColorFade 2s forwards alternate;
+}
+
+@keyframes borderColorFade {
+    from {
+        border-color: lighten($color:red, $amount: 25%);
+    }
+
+    to {
+        border-color: $grey;
+    }
+}
