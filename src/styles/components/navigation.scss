@@ -1,1 +1,54 @@
-.navigation {}
+.navigation {
+    position: fixed;
+    top: -1%;
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: 5px;
+    z-index: 2000;
+    transition: 0.3s;
+
+    &>svg {
+        width: 2rem;
+        height: 5rem;
+    }
+
+
+    &__container {
+        position: relative;
+        transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        left: 0;
+
+        &--active {
+
+            left: 15%;
+        }
+    }
+
+    &__navbar {
+        border-radius: 10px;
+        height: 90%;
+        position: fixed;
+        left: -10%;
+        top: 5%;
+        background-color: $cream;
+        transition: 0.3s ease-in-out;
+        padding: 1rem 0.5rem;
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        svg {
+            cursor: pointer;
+            width: 2rem;
+            height: 1.7rem;
+            fill: white;
+        }
+
+        &--active {
+            left: 5%;
+            opacity: 1;
+        }
+    }
+
+}
