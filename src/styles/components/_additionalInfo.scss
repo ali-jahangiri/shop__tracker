@@ -1,0 +1,15 @@
+.additionalInfo {
+    margin: 2.2rem 0;
+
+    textarea {
+        @include input();
+        width: 100%;
+        min-height: 8rem;
+    }
+
+    &__header {
+        text-align: right;
+        font-size: 1.2rem;
+
+    }
+}

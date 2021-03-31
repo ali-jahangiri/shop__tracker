@@ -1,6 +1,11 @@
+import bodyOverflowHandler from "../utils/bodyOverflowHandler";
+
 const Modal = ({ children, trigger }) => {
   const clickHandler = ({ target }) => {
-    if (target.classList.contains("modal")) trigger(false);
+    if (target.classList.contains("modal")) {
+      trigger(false);
+      bodyOverflowHandler(false);
+    }
   };
 
   return (

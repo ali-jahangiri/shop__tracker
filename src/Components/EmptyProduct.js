@@ -1,7 +1,5 @@
-const EmptyProduct = () => (
-  <div className="product__empty">
-    <p>شما هیچ محصولی ندارید.ابتدا دسته ای اضافه و سپس به آن محصول وارد کنید</p>
-  </div>
+const EmptyProduct = ({ children }) => (
+  <div className="product__empty">{children}</div>
 );
 
 export default EmptyProduct;

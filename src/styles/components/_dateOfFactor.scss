@@ -1,0 +1,19 @@
+.factorDate {
+    @include input();
+}
+
+.calender {
+    box-shadow: none;
+    border: 2px solid $grey;
+    width: 88%;
+}
+
+@keyframes waw {
+    from {
+        transform: translateY(10px);
+    }
+
+    to {
+        transform: translateY(0px);
+    }
+}

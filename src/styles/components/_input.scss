@@ -1,0 +1,25 @@
+.input {
+    @include input();
+    margin-bottom: 0.2rem !important;
+    width: 90%;
+    margin: 1rem 0;
+
+    &--invalid {
+        @include inputErr();
+        border-color: lightcoral !important;
+    }
+
+    &__errText {
+        display: block;
+        color: lightsalmon;
+        margin-bottom: 1rem;
+        opacity: 0;
+        animation: fade 0.6s forwards;
+    }
+}
+
+@keyframes fade {
+    to {
+        opacity: 1;
+    }
+}

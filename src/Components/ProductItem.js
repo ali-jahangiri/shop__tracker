@@ -1,7 +1,5 @@
 const ProductItem = ({ id, name, type, price }) => {
-  const onClick = () => {
-    console.log("sd");
-  };
+  const onClick = () => {};
   return (
     <tr onDoubleClick={onClick} className="product__item">
       <th>

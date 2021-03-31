@@ -4,7 +4,6 @@ import NavIcon from "../Components/NavIcon";
 
 const WithNavigation = ({ children }) => {
   const isNavActive = useSelector((state) => state.ui.isNavigationActive);
-
   return (
     <div
       className={`navigation__container ${

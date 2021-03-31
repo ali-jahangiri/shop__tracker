@@ -12,7 +12,12 @@ const ProductManager = () => {
     <div className="container">
       <PageHeader title="محصولات" />
       {!categories.length ? (
-        <EmptyProduct />
+        <EmptyProduct>
+          <p>
+            شما هیچ محصولی ندارید.ابتدا دسته ای اضافه و سپس به آن محصول وارد
+            کنید
+          </p>
+        </EmptyProduct>
       ) : (
         categories.map((el, i) => (
           <ProductCategory key={i} categoryTitle={el} />

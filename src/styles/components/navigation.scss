@@ -1,18 +1,16 @@
 .navigation {
-    position: fixed;
-    top: -1%;
-    cursor: pointer;
-    padding: 1rem;
-    border-radius: 5px;
-    z-index: 2000;
-    transition: 0.3s;
 
-    &>svg {
+    &__svg {
         width: 2rem;
         height: 5rem;
+        position: fixed;
+        top: -1%;
+        cursor: pointer;
+        z-index: 2000;
+        transition: 0.3s;
     }
 
-
+    // main container of app , witch navbar is active and visible , this gonna side away
     &__container {
         position: relative;
         transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);

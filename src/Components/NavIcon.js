@@ -19,13 +19,11 @@ const NavIcon = ({ isActive }) => {
   };
 
   return (
-    <div
+    <HiOutlineMenuAlt2
       style={{ left: `${isActive ? "15%" : "5%"}` }}
       onClick={clickHandler}
-      className="navigation"
-    >
-      <HiOutlineMenuAlt2 />
-    </div>
+      className="navigation__svg"
+    />
   );
 };
 
