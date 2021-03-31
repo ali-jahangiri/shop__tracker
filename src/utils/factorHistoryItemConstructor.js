@@ -1,6 +1,8 @@
-const factorHistoryItemConstructor = (allValue) => ({
+const factorHistoryItemConstructor = (allValue, id, personalInfo) => ({
   ...allValue,
   createTime: Date.now(),
+  id,
+  personalInfo,
 });
 
 export default factorHistoryItemConstructor;

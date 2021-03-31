@@ -14,6 +14,7 @@ const Navbar = ({ isActive }) => {
     history.push(path);
     dispatch(navigationSetter(false));
   };
+  // TODO make icons inside Link component
   return (
     <div
       className={`navigation__navbar ${

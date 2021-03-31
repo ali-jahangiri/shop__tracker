@@ -6,6 +6,7 @@ import WithNavigation from "../HOC/WithNavigation";
 // pages
 import Dashboard from "../pages/Dashboard";
 import FactorCompleted from "../pages/FactorCompleted";
+// import FactorHistory from "../pages/FactorHistory";
 import NewFactor from "../pages/NewFactor";
 import NotFound from "../pages/NotFound";
 import ProductManager from "../pages/ProductManager";

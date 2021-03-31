@@ -1,6 +1,8 @@
 @import "./variables";
 @import "./mixin";
 @import "./components/index";
+@import "./layouts/index";
+@import "./reset/printFrame";
 
 body {
     font-family: 'Vazir', sans-serif;

@@ -5,8 +5,9 @@ import { setFactorDate } from "../../Store/slices/newFactorSlice";
 const DateOfFactor = () => {
   const settledDate = useSelector((state) => state.newFactor.date);
   const dispatch = useDispatch();
-  const onChangeHandler = ({ from, to }) =>
+  const onChangeHandler = ({ from, to }) => {
     dispatch(setFactorDate({ from, to }));
+  };
 
   return (
     <Calendar

@@ -1,0 +1,119 @@
+.factorCompleted {
+
+
+    &__personalInfo {
+        text-align: right;
+        margin: 2rem 0;
+
+        div {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__detail {
+        text-align: left;
+        font-size: .9rem !important;
+    }
+
+    &__title {
+        font-size: 1.2rem;
+        color: darken($color: $grey, $amount: 30%);
+    }
+
+    &__value {
+        font-weight: 500;
+        font-size: 1.35rem;
+    }
+
+    &__date {
+        text-align: right;
+
+        span {
+            font-weight: 500;
+            margin: 0 .2rem;
+        }
+    }
+
+    &__table {
+        text-align: right;
+        margin-top: 3rem;
+
+        thead {
+            th {
+                border-bottom: 2px solid $cream;
+            }
+
+            // money sing style
+            span {
+                font-size: 0.6rem;
+                color: $grey;
+            }
+        }
+
+        &__type {
+            span {
+                &:first-child {
+                    font-size: .8rem;
+                }
+            }
+        }
+
+        th {
+            border: none;
+
+            &:not(&:last-child) {
+                text-align: center;
+            }
+        }
+
+    }
+
+    &__goHome {
+        background-color: transparent;
+        padding: .7rem 2rem;
+        color: $grey;
+        border: 2px solid $light__green;
+        border-radius: 5px;
+        margin: 0 1rem;
+    }
+
+    &__totalPrice {
+        text-align: right;
+        margin-bottom: 3rem;
+        margin-top: -0.5rem;
+
+        div {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+        }
+
+        span {
+            font-weight: 700;
+            padding-top: 1rem;
+            font-size: 1.3rem;
+
+            &:first-child {
+                border-top: 3px dashed $grey;
+            }
+
+            &:not(&:first-child) {
+                font-size: 0.7rem;
+                color: $grey;
+                margin-right: 0.2rem;
+            }
+
+        }
+    }
+
+    &__printTrigger {
+        user-select: none;
+        border: none;
+        background-color: $primary_green;
+        color: white;
+        padding: .7rem 2rem;
+        border-radius: 8px;
+        margin: 1rem 0;
+    }
+
+}

@@ -1,0 +1,31 @@
+.printFrame {
+    .factorCompleted__detail {
+
+        p,
+        span {
+            font-size: 0.9rem !important;
+
+        }
+    }
+
+    p,
+    th,
+    span,
+    div {
+        font-size: 1.8rem !important;
+    }
+
+    thead {
+        span {
+            font-size: 1.1rem !important;
+        }
+    }
+
+    tbody {
+
+        th,
+        span {
+            font-size: 1.6rem !important;
+        }
+    }
+}

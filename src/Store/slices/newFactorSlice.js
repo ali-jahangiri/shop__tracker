@@ -3,7 +3,6 @@ import { createSlice } from "@reduxjs/toolkit";
 const INIT = {
   productList: [],
   date: { from: null, to: null },
-  personalInfo: {},
   additionalInfo: {
     text: "",
     priority: 1,
@@ -45,10 +44,7 @@ const newFactorSlice = createSlice({
     setFactorAdditionalText: (state, action) => {
       state.additionalInfo.text = action.payload;
     },
-    setPersonalInfo: (state, action) => {
-      state.personalInfo = action.payload;
-    },
-    clearFactor: (state, action) => {
+    clearFactor: () => {
       return INIT;
     },
   },
@@ -63,7 +59,6 @@ export const {
   setFactorDate,
   setFactorPriority,
   setFactorAdditionalText,
-  setPersonalInfo,
   clearFactor,
 } = newFactorSlice.actions;
 export default newFactorSlice.reducer;

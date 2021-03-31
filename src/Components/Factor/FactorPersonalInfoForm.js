@@ -23,9 +23,15 @@ const FactorPersonalInfoForm = ({
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const newFactor = useSelector((state) => state.newFactor);
+  // lazy initialization for getting stat with initialization and reassign it when need
+  const [shouldPreventTransforming, setShouldPreventTransforming] = useState(
+    () => !!Object.values(newFactor.productList).length
+  );
 
   const submitHandler = () => {
+    setShouldPreventTransforming(false);
     createFactorHandler(values);
+    bodyOverflowHandler(false);
     resetForm();
   };
   return (
@@ -64,7 +70,7 @@ const FactorPersonalInfoForm = ({
       <PickedProductList />
       <AdditionalInformationFactor />
       <Prompt
-        when={!!Object.values(newFactor.productList).length}
+        when={shouldPreventTransforming}
         message="آیا میخواهید از صفحه خارج شوید ؟ با خارج شدن اطلاعات این فاکتور از بین میرود"
       />
       <button

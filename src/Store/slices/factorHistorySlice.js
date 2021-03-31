@@ -4,7 +4,7 @@ const factorHistorySlice = createSlice({
   name: "factorHistory",
   initialState: [],
   reducers: {
-    addFactor: (state, action) => {
+    addFactorToHistory: (state, action) => {
       state.push(action.payload);
     },
     removeFactor: (state, action) => {
@@ -13,5 +13,5 @@ const factorHistorySlice = createSlice({
   },
 });
 
-export const { addFactor, removeFactor } = factorHistorySlice.actions;
+export const { addFactorToHistory, removeFactor } = factorHistorySlice.actions;
 export default factorHistorySlice.reducer;
