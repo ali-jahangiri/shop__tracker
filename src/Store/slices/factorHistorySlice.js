@@ -10,8 +10,15 @@ const factorHistorySlice = createSlice({
     removeFactor: (state, action) => {
       state.filter((el) => el.id !== action.payload);
     },
+    clearFactorHistory: (state, action) => {
+      return [];
+    },
   },
 });
 
-export const { addFactorToHistory, removeFactor } = factorHistorySlice.actions;
+export const {
+  addFactorToHistory,
+  removeFactor,
+  clearFactorHistory,
+} = factorHistorySlice.actions;
 export default factorHistorySlice.reducer;

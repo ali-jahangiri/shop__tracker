@@ -1,7 +1,7 @@
-const bodyOverflowHandler = (state) => {
+const bodyOverflowHandler = (state, overFlowDirection = "overflow") => {
   if (state) {
-    document.body.style.overflow = "hidden";
-  } else document.body.style.overflow = "auto";
+    document.body.style[overFlowDirection] = "hidden";
+  } else document.body.style[overFlowDirection] = "auto";
 };
 
 export default bodyOverflowHandler;
