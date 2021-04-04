@@ -6,11 +6,13 @@ import WithNavigation from "../HOC/WithNavigation";
 // pages
 import Dashboard from "../pages/Dashboard";
 import FactorCompleted from "../pages/FactorCompleted";
+
 // import FactorHistory from "../pages/FactorHistory";
 import NewFactor from "../pages/NewFactor";
 import NotFound from "../pages/NotFound";
 import ProductManager from "../pages/ProductManager";
 import ScheduleCalender from "../pages/Schedule";
+import ScheduleDay from "../pages/ScheduleDay";
 import Setting from "../pages/Setting";
 
 const AppRouter = () => {
@@ -22,6 +24,7 @@ const AppRouter = () => {
           <Route path="/new-factor/:id" component={FactorCompleted} />
           <Route path="/new-factor" component={NewFactor} />
           <Route path="/product" component={ProductManager} />
+          <Route path="/schedule/:day" component={ScheduleDay} />
           <Route path="/schedule" component={ScheduleCalender} />
           <Route path="setting" component={Setting} />
           <Route component={NotFound} />

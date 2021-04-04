@@ -31,38 +31,25 @@
             align-items: center;
             user-select: none;
 
-            &__tooltip {
-                position: absolute;
-                border: 2px solid $grey;
-                background-color: rgba(255, 255, 255, 0.616);
-                border-radius: 5px;
-                padding: 1rem;
-                z-index: 20000;
-                left: 105%;
-                top: 0;
-                opacity: 0.3;
-                transition: 0.3s;
-                width: 110%;
-
-                &:hover {
-                    opacity: 1;
-                }
-            }
-
             &__dayNumber {
                 position: absolute;
                 top: 5%;
                 z-index: 11;
                 left: 50%;
                 transform: translateX(-50%);
+                cursor: pointer;
+
+                &:hover {
+                    font-weight: 700;
+                    font-size: 1.1rem;
+
+                }
             }
 
             &--today {
                 span {
                     border-top: 2px solid $light__green;
                 }
-
-                // make border same color   
             }
         }
 

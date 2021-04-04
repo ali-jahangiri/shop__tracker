@@ -4,4 +4,10 @@
     font-weight: 700;
     text-align: right;
     margin-top: 1rem;
+
+    &--primary {
+        color: darken($color:$grey, $amount: 20%);
+        margin: 0 1rem;
+        text-decoration: underline;
+    }
 }

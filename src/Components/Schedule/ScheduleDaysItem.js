@@ -2,12 +2,12 @@ import { RiMoreLine } from "react-icons/ri";
 
 import WorkbarInsideOneDay from "./workbarInsideOneDay";
 import Workbar from "./Workbar";
-import { useState } from "react";
 
 import persian from "persian-date";
+import { useHistory } from "react-router";
 
 const ScheduleDaysItem = ({ dayNumber, isToday, workTime }) => {
-  const [isTooltipOpen, setIsTooltipOpen] = useState(false);
+  const history = useHistory();
 
   const workOnlyInsideThisDay = workTime.filter(({ date }) =>
     [date.from.day, date.to.day].every((el) => el === dayNumber)
@@ -33,16 +33,22 @@ const ScheduleDaysItem = ({ dayNumber, isToday, workTime }) => {
     );
   });
 
-  const clickHandler = () => {
-    setIsTooltipOpen(!isTooltipOpen);
+  const forwardTodayHandler = () => {
+    history.push(`/schedule/${dayNumber}`);
   };
+
   return (
     <div
       className={`schedule__day__item ${
         isToday ? "schedule__day__item--today" : ""
       }`}
     >
-      <span className="schedule__day__item__dayNumber">{dayNumber}</span>
+      <span
+        onClick={forwardTodayHandler}
+        className="schedule__day__item__dayNumber"
+      >
+        {dayNumber}
+      </span>
       {workOnTwoDay.slice(0, 3).map((el, i) => (
         <Workbar currentDayNumber={dayNumber} index={i} key={i} {...el} />
       ))}
@@ -59,17 +65,11 @@ const ScheduleDaysItem = ({ dayNumber, isToday, workTime }) => {
         <WorkbarInsideOneDay key={i} index={i} {...el} />
       ))}
       {workOnTwoDay.length >= 4 && (
-        <div onClick={clickHandler} className="workbar--hasMore">
+        <div className="workbar--hasMore">
           <RiMoreLine />
         </div>
       )}
       {workOnlyInsideThisDay.length >= 3 && <RiMoreLine />}
-      {isTooltipOpen && (
-        <div className="schedule__day__item__tooltip">
-          Ratione veritatis exercitationem ex incidunt voluptatem hic eaque
-          ullam. Repudiandae omnis earum cumque hic. A ea non expedita qui porro
-        </div>
-      )}
     </div>
   );
 };

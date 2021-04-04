@@ -1,0 +1,40 @@
+.scheduleDayItem {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin: 5rem 0;
+    border-right: 2px solid transparent;
+    padding-right: 1rem;
+
+    &:hover &__index {
+        right: -5%;
+
+    }
+
+    &__index {
+        position: absolute;
+        top: 0%;
+        right: -6%;
+        color: $grey;
+        font-size: 1.3rem;
+        transition: 0.3s;
+    }
+
+    div {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    button {
+        border: 2px solid $green;
+        border-radius: 5px;
+        background-color: transparent;
+        padding: 0.2rem 1rem;
+    }
+}

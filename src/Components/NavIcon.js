@@ -8,12 +8,6 @@ import selfClearTimeout from "../utils/selfClearTimeout";
 const NavIcon = ({ isActive }) => {
   const dispatch = useDispatch();
   const clickHandler = () => {
-    // bodyOverflowHandler(
-    //   selfClearTimeout(() => {
-    //     if (isActive) return true;
-    //     return false;
-    //   }, 1000)
-    // );
     dispatch(navigationSetter(!isActive));
     if (isActive)
       selfClearTimeout(() => {
@@ -23,10 +17,6 @@ const NavIcon = ({ isActive }) => {
       console.log("is false");
       bodyOverflowHandler(true, "overflowX");
     }
-    // else
-    //   selfClearTimeout(() => {
-    //     bodyOverflowHandler(false, "overflowX");
-    //   }, 800);
   };
   return (
     <HiOutlineMenuAlt2
