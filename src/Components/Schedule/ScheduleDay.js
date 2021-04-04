@@ -18,7 +18,6 @@ const ScheduleDays = ({ currentMonth, nowDatOfMonth }) => {
       .filter((el) => el.date.from.month === ++makeLocalRef(currentMonth).ref)
       .map((el) => ({ date: el.date, id: el.id, color: el.hashColor }))
   );
-
   return allDays.map((_, i) => (
     <div className="schedule__day" key={i}>
       <ScheduleDaysItem

@@ -2,10 +2,13 @@ import { useDispatch } from "react-redux";
 import { useHistory } from "react-router";
 import { navigationSetter } from "../Store/slices/uiSlice";
 
+// icons
+
 import { RiHomeLine } from "react-icons/ri";
 import { RiStoreLine } from "react-icons/ri";
 import { HiOutlineShoppingCart } from "react-icons/hi";
 import { FiCalendar } from "react-icons/fi";
+
 const Navbar = ({ isActive }) => {
   const history = useHistory();
   const dispatch = useDispatch();

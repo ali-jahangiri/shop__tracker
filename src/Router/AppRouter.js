@@ -11,6 +11,7 @@ import NewFactor from "../pages/NewFactor";
 import NotFound from "../pages/NotFound";
 import ProductManager from "../pages/ProductManager";
 import ScheduleCalender from "../pages/Schedule";
+import Setting from "../pages/Setting";
 
 const AppRouter = () => {
   return (
@@ -22,6 +23,7 @@ const AppRouter = () => {
           <Route path="/new-factor" component={NewFactor} />
           <Route path="/product" component={ProductManager} />
           <Route path="/schedule" component={ScheduleCalender} />
+          <Route path="setting" component={Setting} />
           <Route component={NotFound} />
         </Switch>
       </WithNavigation>

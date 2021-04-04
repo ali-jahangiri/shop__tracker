@@ -5,12 +5,13 @@
     right: 0;
     z-index: 11;
     width: 100%;
-    height: 2rem;
+    height: 1.7rem;
     background-color: $light__green;
     border-radius: 0 5px 5px 0;
     border: 2px solid transparent;
     background-color: transparent;
     border-left: none;
+    cursor: pointer;
 
     &--insideOneDay {
         border-radius: 5px;
@@ -21,5 +22,24 @@
         border-radius: 5px 0 0 5px;
         border-right: none;
         border-left: 2px solid transparent;
+    }
+
+    &--hasMore {
+        position: absolute;
+        bottom: -5%;
+        cursor: pointer;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        &:hover svg {
+            fill: $green;
+        }
+    }
+
+    &--between {
+        border-left: none !important;
+        border-right: none !important;
+        border-radius: 0 !important;
     }
 }
