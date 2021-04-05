@@ -24,7 +24,6 @@ const FactorCompleted = ({
     id: factorId,
   } = targetFactor;
   // TODO add sort
-  // TODO add import and export from localStorage
   const ref = useRef();
   const [wasPrinted, setWasPrinted] = useState(false);
   const totalPrice = targetFactor.productList.reduce((acc, res) => {
@@ -148,7 +147,6 @@ const FactorCompleted = ({
       <div className="container">
         <div className="row d-flex align-items-center">
           <ReactToPrint
-            // onBeforeGetContent={(shit) => }
             onPrintError={(err) =>
               alert(
                 `مشکلی در پرینت این فاکتور وجود دارد.مجددا امتحان کنید و یا به توسعه دهنه مشکل را گزارش دهید ${err}`

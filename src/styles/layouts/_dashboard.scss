@@ -1,0 +1,6 @@
+.dashboard {
+    &__title {
+        color: darken($color:$grey, $amount: 35%);
+        font-size: 1.2rem;
+    }
+}

@@ -112,7 +112,7 @@ const Setting = () => {
             <p className="">
               اخرین نسخه وارد شده به عنوان فایل پشتیبان , نسخه{" "}
               {lastImportedBackupFile} می باشد که در تاریخ{" "}
-              {new persian(lastImportedBackupFile).format("YYYY/MM/DD")}
+              {new persian(lastImportedBackupFile).format("YYYY/MM/DD ")}
               تهیه شده است
             </p>
           </div>
