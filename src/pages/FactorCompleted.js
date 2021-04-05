@@ -6,7 +6,7 @@ import { useRef, useState } from "react";
 
 import ReactToPrint from "react-to-print";
 import { Link } from "react-router-dom";
-import separateBy3 from "../utils/seprateBy3";
+import separateBy3 from "../utils/separateBy3";
 
 const FactorCompleted = ({
   match: {

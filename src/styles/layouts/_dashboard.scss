@@ -1,6 +1,48 @@
 .dashboard {
     &__title {
-        color: darken($color:$grey, $amount: 35%);
+        color: darken($color:$grey, $amount: 45%);
         font-size: 1.2rem;
+        text-align: right;
+        margin-bottom: -2rem;
+    }
+
+    &__total {
+        margin: 5rem 0;
+        border: 2px solid $light__green;
+        border-radius: 8px;
+        padding: 0.6rem;
+        position: relative;
+        padding-bottom: 0;
+
+        p {
+            margin: 0;
+        }
+
+        &:hover &__title {
+            transform: translateY(-10px);
+        }
+
+        &__title {
+            text-align: right;
+            position: relative;
+            background-color: $light__green;
+            border-radius: 8px;
+            padding: 0.6rem;
+            position: absolute;
+            right: 5%;
+            bottom: -40%;
+            transition: 0.3s;
+        }
+
+        &__value {
+            font-size: 2rem;
+            color: $green;
+            display: flex;
+            font-weight: 700;
+
+            span {
+                font-size: 0.6rem;
+            }
+        }
     }
 }
