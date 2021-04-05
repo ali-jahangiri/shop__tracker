@@ -26,7 +26,7 @@ const AppRouter = () => {
           <Route path="/product" component={ProductManager} />
           <Route path="/schedule/:day" component={ScheduleDay} />
           <Route path="/schedule" component={ScheduleCalender} />
-          <Route path="setting" component={Setting} />
+          <Route path="/setting" component={Setting} />
           <Route component={NotFound} />
         </Switch>
       </WithNavigation>

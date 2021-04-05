@@ -1,0 +1,31 @@
+.setting {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin: 2rem 0;
+
+    p {
+        margin: 0;
+    }
+
+    &__title {
+        color: darken($color:$grey, $amount: 35%);
+        font-weight: 700;
+        font-size: 1.6rem;
+        margin-bottom: 1rem !important;
+    }
+
+    &__cta {
+        border: 2px solid $light__green;
+        border-radius: 5px;
+        padding: 0.3rem 1rem;
+        background-color: transparent;
+        display: flex;
+        align-self: flex-end;
+        align-items: center;
+
+        svg {
+            margin: 0 0.3rem;
+        }
+    }
+}

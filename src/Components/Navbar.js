@@ -3,11 +3,11 @@ import { useHistory } from "react-router";
 import { navigationSetter } from "../Store/slices/uiSlice";
 
 // icons
-
 import { RiHomeLine } from "react-icons/ri";
 import { RiStoreLine } from "react-icons/ri";
 import { HiOutlineShoppingCart } from "react-icons/hi";
 import { FiCalendar } from "react-icons/fi";
+import { FiSettings } from "react-icons/fi";
 
 const Navbar = ({ isActive }) => {
   const history = useHistory();
@@ -33,6 +33,10 @@ const Navbar = ({ isActive }) => {
       <FiCalendar
         style={{ fill: "none", stroke: "white" }}
         onClick={() => clickHandler("/schedule")}
+      />
+      <FiSettings
+        onClick={() => clickHandler("/setting")}
+        style={{ fill: "none", stroke: "white" }}
       />
     </div>
   );

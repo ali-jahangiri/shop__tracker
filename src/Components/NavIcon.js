@@ -13,10 +13,7 @@ const NavIcon = ({ isActive }) => {
       selfClearTimeout(() => {
         bodyOverflowHandler(false, "overflowX");
       }, 420);
-    else {
-      console.log("is false");
-      bodyOverflowHandler(true, "overflowX");
-    }
+    else bodyOverflowHandler(true, "overflowX");
   };
   return (
     <HiOutlineMenuAlt2

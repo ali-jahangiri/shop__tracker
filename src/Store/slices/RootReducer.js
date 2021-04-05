@@ -7,18 +7,20 @@ import factorHistorySlice from "./factorHistorySlice";
 import ProductSlice from "./ProductSlice";
 import uiSlice from "./uiSlice";
 import newFactorSlice from "./newFactorSlice";
+import SettingSlice from "./SettingSlice";
 
 const rootReducer = combineReducers({
   factorHistory: factorHistorySlice,
   product: ProductSlice,
   ui: uiSlice,
   newFactor: newFactorSlice,
+  setting: SettingSlice,
 });
 
 const persistConfig = {
   key: "root",
   storage,
-  whiteList: ["factorHistory", "product", "newFactor"],
+  whiteList: ["factorHistory", "product", "newFactor", "setting"],
   blacklist: ["ui"],
 };
 
